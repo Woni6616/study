@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문화재청 메인 탭메뉴</title>
+    <style>
+       
+        .tab_area .on h1{background-color:yellow}
+        .tab_area .on p{background-color:aqua}
+        .tab_area .on span{background-color:pink}
+    </style>
+</head>
+<body>
+    <div class=" tab_area">
+        <div class="on">
+        <h1>탭메뉴명111</h1>
+        <p>리스트111</p>
+        <span>더보기111</span>
+        </div>
+
+        <div>
+        <h1>탭메뉴명222</h1>
+        <p>리스트222</p>
+        <span>더보기222</span>
+        </div>
+
+        <div>
+        <h1>탭메뉴명333</h1>
+        <p>리스트333</p>
+        <span>더보기333</span>
+         </div>
+    </div>
+
+    <script>
+        //h1을 클릭하면, p,span 디자인 변경
+        const tabBoxs= document.querySelectorAll('.tab_area div')
+        const hns1= document.querySelectorAll('.tab_area h1')
+        const lists= document.querySelectorAll('.tab_area p')
+        const mores= document.querySelectorAll('.tab_area span')
+        const tabBoxNum = tabBoxs.length;
+        //0번째 h1 클릭하면 0번째 h1,0번째 p, 0번째 span 디자인(배경색 바꾸기)
+        
+      
+        for(let i=0;i<tabBoxNum;i++){
+        hns1[i].addEventListener('click',()=>{
+            for(let k=0;k<tabBoxNum;k++){
+                tabBoxs[k].className='';
+            }
+            tabBoxs[i].className ='on';
+        })//동작(event),익명함수
+        }
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

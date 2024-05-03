@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>1</span>
+   <script>
+    // 여러줄 주석
+    const numBox="span 요소";
+    let num =1;
+    cosole .log(num+1);
+/*
+    let bool=confirm('장바구니에 넣으시겠습니까?')
+    // 확인(참, true,1), 취소(거짓, false, 0)
+
+
+    if(bool){consol.log('장바구니에 담김'); }
+    else{consol.log('뭐할래?'); }
+   */
+
+  
+    let classA =['홍씨',김씨','이씨','2'];
+    console.log(classA[0]);
+
+
+    function banner(){console.log('내가 만드는 함수');
+    console.log(num+1)}
+    //직접만드는 함수 -호출해야됨
+
+    banner();
+
+    //키:값= 객체= object
+
+    let obj={
+        objname:'블라우스',
+        objcolor : 'red',
+        objcodenum : 12345
+    }
+
+    console.log(obj.objcolor)
+    //['red',''yellow'...]
+
+
+  let pd={
+    pdtxt:'제주천혜향',
+    pdprice:'23,900',
+    pddel: '무료',
+    pdcolor:['red','orange','pink','blue']
+  }
+
+  console .log('상품설명 : '|+pd.pdtxt);
+  console .log('상품가격 : '|+pd.pdprice +'원');
+  console .log('배송정보 : '|+pd.pddel);
+  console .log('상품색상 : '|+pd.pdcolor[2]);
+
+//데이터를 변수에 저장 콘솔에 출력
+  //사용자 휴대폰 번호를 받아서 DB에 저장
+let phoneNum = prompt('휴대폰 번호를 입력하세요')
+console .log(phoneNum);
+
+
+  
+   </script>
+</body>
+</html>

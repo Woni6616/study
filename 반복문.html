@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+  <!-- 반복문 -->
+
+  //초기값;조건식;증강식
+    for(let i=0;i<5;i++){
+        console.log(i);
+    document.write('<li>리스트</li>');}
+    
+    
+    // h1-h6 : for 문으로 생성
+
+        for(let i=1;i<=6;i++){
+            document.write('<h'+i+'>제목태그'+i+'</h'+i+'>')
+        }
+
+        //문단(p)
+    let classWeb =['사과','귤','바나나','포도'];
+    //'우리반에는 사과양이 있습니다'
+
+    for(let i=0;i<classWeb.length;i++){
+        document.write('<p>우리반에는 '+classWeb[i]+'양이 있습니다</p>')
+    }
+
+
+    //1부터 100까지의 숫자를 출력하세요. p태그
+    //1-100까지 모두 더한 합 출력
+    let totalNum=0;
+    for(let i=1;i<=100;i++){
+        document.write('<p>'+i+'</p>')
+        totalNum=totalNum +i;
+    }
+        document.write('<p>1~100 더한값 출력: '+totalNum+'</p>');
+    
+    //1~100까지 짝수만 더한 값
+    //반복문, 조건문if-else, else if
+
+    //if:짝수만 더해서
+    //else:홀수만 더해서
+    let evenNum=0;
+    for(let i=1;i<=100;i++){
+       if(i%2==0){evenNum=evenNum+i;}
+    else{oddNum=evenNum+i;
+    }
+    }
+    console.log();
+    console.log();
+
+
+
+    </script>
+</body>
+</html>

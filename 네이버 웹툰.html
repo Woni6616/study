@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+   <style>
+.naver_webtoon.on{background-color: aqua;color:red;}
+
+.familysite dd{display:none;}
+.familysite dd.on{display:block;background-color: beige;}
+    </style>
+</head>
+<body>
+    <div class="naver_webtoon">
+        <div>
+         <p>월요웹툰</p> 
+          <p>화요웹툰</p>  
+          <p>수요웹툰</p>
+          <p>목요웹툰</p>
+          <p>금요웹툰</p>
+          <p>토요웹툰</p>
+          <p>일요웹툰</p>
+     
+          
+     
+     
+        </div>
+          <ul>
+            
+         </ul>
+     </div>
+     
+     <script>
+         const tabmenu = document.querySelectorAll('.naver_Webtoon p');
+         const tablength = tabmenu.length;
+         console.log('네이버 탭메뉴 갯수: '+tablength);
+         let today = new Date().getDay();//일:0~~~
+         //네이버웹툰 탭메뉴에 요일 디자인.on
+         //tabmenu[today-1].className='on';
+        today = today-4;
+        console.log(today);
+        if(today==0){
+            today=7;
+        }
+        
+         const naver_webtoon = document.getElementsByClassName('naver_webtoon')[0];
+         const ulBox = naver_webtoon.getElementsByTagName('ul')[0];
+     
+         let lists = '';
+         for(let i=1;i<=15;i++){
+             lists +='<li><span>'+i+'</span></li>';
+         }
+         ulBox.innerHTML=lists;
+     
+     
+         console.log(new Date().getDay()); // 일(0)~목(3)
+     
+     </script>
+     
+
+     <dl class="familysite">
+        <dt>소속기관</dt>
+        <dd>
+            <div>기관리스트</div>
+            <div>기관리스트</div>
+            <div>기관리스트</div>
+            <div>기관리스트</div>
+            <div>기관리스트</div>
+    
+        </dd>
+     </dl>
+
+<script>
+    //dt를 클릭하면 dd(보이게/안보이게)
+    const dtBox = document.querySelector('.familysite dt');
+    const ddBox = document.querySelector('.familysite dd');
+
+    //let bools=true;
+    ddBox.addEventListener('click',()=>{
+        //console.log('클릭 실행');
+        if(ddBox.className=='')
+      { ddBox.className='on';
+        //bools=false;
+        }else{
+        ddBox.className='';
+        //bools=true;
+        }
+       
+
+    }
+);
+
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크립트 실습</title>
+</head>
+<body>
+    <h1>태그1</h1>
+    <h1>태그2</h1>
+    <h1>태그3</h1>
+    <h1>태그4</h1>
+    <h1>태그5</h1>
+    <h1>태그6</h1>
+    <script>
+        //query
+        //get~
+        //const :상수(안변하는 값) = 선택하고 싶은 대상
+        //let : 변수(변하는 값) = 바꿔야하는 값
+
+       const hn1= document.getElementsByTagName('h1');
+       hn1[0].style.color='red';
+       hn1[1].style.color='red';
+       hn1[2].style.color='red';
+
+
+        //length : 
+        let hnlength=hn1.length;
+        console.log(hnlength);
+
+        for(let i=0;i<=6;i++){//초기값;조건식;증감식
+            //0,1,2: 1번만 파랑색
+            if(i==0){
+                hn1[i].style.color='orange';
+            }else if(i==1){
+                hn1[i].style.color='red';
+            }else{hn1[i].style.color='gray';
+
+            }
+        }
+        //메인매뉴-마우스올리면 나타나고, 마우스 내리면-사라지고
+        //전체메뉴-1클릭 나타나고, 1클릭 사라지고
+        //패밀리 사이트-1 클릭 나타나고, 1클릭 사라짐
+
+        
+
+
+    </script>
+</body>
+</html>

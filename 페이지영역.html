@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이지 영역</title>
+    
+<style>
+    ul,li{padding:0;margin:0;list-style:none;}
+    ul{width:300px;height:200px;overflow:hidden;}
+    li{display:none}
+    li:first-child{display:block}
+    li img{width:100%}
+</style>
+</head>
+<body>
+    <ul>
+        <li><img src="https://cdn.pixabay.com/photo/2023/09/16/20/14/ai-generated-8257503_1280.jpg" alt=""/></li>
+        <li><img src="https://cdn.pixabay.com/photo/2024/03/14/08/52/pug-8632718_1280.jpg" alt=""/></li>
+        <li><img src="https://cdn.pixabay.com/photo/2023/08/31/14/34/ai-generated-8225267_1280.jpg" alt=""/></li>
+        <li><img src="https://cdn.pixabay.com/photo/2024/04/28/04/31/animal-8724782_1280.jpg" alt=""/></li>
+        <li><img src="https://cdn.pixabay.com/photo/2022/12/21/20/59/bear-7670877_1280.jpg" alt=""/></li>
+    </ul>
+
+
+
+
+
+    <div class="paging">
+        <span class="cnt">현재페이지번호</span>
+        /<span class="total">총페이지수</span>
+        <button type="button" class="btn_prev">이전</button>
+        <button type="button" class="btn_next">다음</button>
+    </div>
+
+<script>
+//현재 페이지 번호, 총페이지 수 생성
+let cntNum = 1;
+let totalNum = 5;
+
+const cntBox = document.querySelector('.paging .cnt');
+const totalBox = document.querySelector('.paging .total');
+cntBox .innerText= cntNum;
+totalBox .innerText = totalNum;
+
+//다음버튼 클릭하면 : 현재 페이지 번호 바꾸기,
+//조건: 총페이지수를 넘어가면 안됨
+
+const lists = document.querySelectorAll('li');
+const nextBtn=document.querySelector('.btn_next');
+nextBtn.addEventListener('click',()=>{
+    //cntNum = cntNum+1;
+    if(cntNum<totalNum){
+        lists[cntNum-1].style.display='none';
+        lists[cntNum].style.display='block';
+        cntNum++;
+        cntBox.innerText = cntNum;}
+    });
+
+
+
+const prevBtn = document.querySelector('.btn_prev');
+prevBtn.addEventListener('click',()=>{
+    if(cntNum>1){
+        cntNum--;
+        lists[cntNum].style.display='none';
+        lists[cntNum-1].style.display='block';
+        cntBox.innerText = cntNum;}
+    });
+
+
+
+
+</script>
+
+</body>
+</html>
